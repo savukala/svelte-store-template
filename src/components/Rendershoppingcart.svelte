@@ -17,7 +17,6 @@ const unsubscribeTriangle = triangleQuantity.subscribe(value => {
 // //let storage = JSON.parse(sessionStorage);
 // //console.log(storage);
  function subQuantityCircle(){
-   console.log("subqnt " + circle_count);
         if (!circle_count <= 0) {
          circleQuantity.update(n => n-1);
          navCartUpdateTxt();
