@@ -7,11 +7,14 @@
 	import Rendershoppingcartmodal from './components/Rendershoppingcartmodal.svelte'
 
 </script>
-
+<svelte:head>
+<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+</svelte:head>
 <main>
 <Renderheader />
 <Renderproducts />
-<Rendershoppingcart />
+
 <Rendershoppingcartmodal />
 </main>
 
@@ -21,6 +24,7 @@
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
+		font-family: 'Playfair Display';
 	}
 
 	h1 {
@@ -35,4 +39,36 @@
 			max-width: none;
 		}
 	}
+	.header {
+
+	}
+	.product-container {
+	  font-family: 'Playfair Display';
+	}
+
+	.nav-logo {
+	  padding: 10px;
+	}
+	.nav-company-name {
+	  color: #1a4855;
+	  font-family: "pacifico" !important;
+	}
+	.nav-company-slogan {
+	  font-family: 'Playfair Display';
+	}
+	.nav-shopping-cart {
+	  font-family: 'Playfair Display';
+	  padding: 10px;
+	}
+	.nav-shopping-cart-txt:hover,
+	.nav-shopping-cart-txt:focus {
+	    cursor: pointer;
+	}
+	.nav-shopping-cart-text {
+	  font-family: 'Playfair Display';
+	}
+	.nav-shopping-cart-img {
+
+	}
+
 </style>

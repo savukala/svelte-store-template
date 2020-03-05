@@ -44,16 +44,49 @@ function subQuantityTriangle(){
 {/if}
 */
 </script>
+<style>
+.button {
+  background-color: #555555; /* Dark */
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin-left: 2rem;
+}
+.button:hover, .button:focus {
+	cursor: pointer;
+}
+.render-products {
+  padding: 10px;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-evenly;
+  border: 1px solid;
+  margin-bottom: 3rem;
+}
+ul {
+  list-style-type: none;
+  margin: 5px;
+  padding: 5px;
+}
+img {
+  margin-right: 2rem;
+}
+</style>
 
 <div class="flex-container">
   <ul>
   {#each products.products as product}
   {#if product.name === "Circle" && circle_count > 0}
-    <li>{product.name} - {product.description} - {product.price} - Quantity {circle_count} <button on:click={subQuantityCircle} class="button" id={product.name}> Remove item </button></li>
+    <li class="render-products"><img src="item1.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={subQuantityCircle} class="button" id={product.name}> Remove item ({circle_count})</button></li>
     {:else if product.name === "Rectangle" && rectangle_count > 0}
-    <li>{product.name} - {product.description} - {product.price} - Quantity: {rectangle_count} <button on:click={subQuantityRectangle} class="button" id={product.name}> Remove item </button></li>
+    <li class="render-products"><img src="item2.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={subQuantityRectangle} class="button" id={product.name}> Remove item ({rectangle_count})</button></li>
     {:else if product.name === "Triangle" && triangle_count > 0}
-    <li>{product.name} - {product.description} - {product.price} - Quantity: {triangle_count} <button on:click={subQuantityTriangle} class="button" id={product.name}> Remove item </button></li>
+    <li class="render-products"><img src="item3.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={subQuantityTriangle} class="button" id={product.name}> Remove item ({triangle_count})</button></li>
     {/if}
   {/each}
   </ul>
