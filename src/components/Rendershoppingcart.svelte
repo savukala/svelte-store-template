@@ -46,20 +46,21 @@ function subQuantityTriangle(){
 </script>
 <style>
 .button {
-  background-color: #555555; /* Dark */
-  border: none;
-  color: white;
+  background-color: white; /* Dark */
+  border: 1px solid black;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1rem;
   margin-left: 2rem;
+  margin-top: 0.5rem;
 }
 .button:hover, .button:focus {
 	cursor: pointer;
 }
 .render-products {
-  padding: 10px;
+  padding: 1rem;
 }
 
 .flex-container {

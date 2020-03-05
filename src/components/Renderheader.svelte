@@ -25,10 +25,10 @@ function renderShoppingCart(){
   display: flex;
   justify-content: space-evenly;
   border: 1px solid;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 .nav-shopping-cart-txt {
-  background-color: #555555; /* Dark */
+  background-color: green; /* Dark */
   border: none;
   color: white;
   text-align: center;

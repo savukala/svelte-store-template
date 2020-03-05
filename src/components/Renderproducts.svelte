@@ -51,9 +51,9 @@ img {
   margin-right: 2rem;
 }
 .button {
-  background-color: #555555; /* Dark */
-  border: none;
-  color: white;
+  background-color: white; /* Dark */
+  border: 1px solid black;
+  color: black;
   text-align: center;
   text-decoration: none;
   display: inline-block;
