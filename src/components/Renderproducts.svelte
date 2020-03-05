@@ -1,11 +1,17 @@
 <script>
+//import the set of products to be displayed on the frontpage.
 import products from '../../products.js';
+//import the true ordered quantities for each product
 import {circleQuantity, rectangleQuantity, triangleQuantity} from './productstore.js';
+//import function navCartUpdateTxt to update the changes
 import {navCartUpdateTxt} from './navcartupdatetxt.js';
+//throw img into a local variable
 let src =  'item1.JPG'
+//init local variables to hold the true ordered products count
 let circle_count;
 let rectangle_count;
 let triangle_count;
+//subscribe to any changes on the ordered products quantity
 const unsubscribeCircle = circleQuantity.subscribe(value => {
  circle_count = value;
 });
@@ -15,7 +21,7 @@ const unsubscribeRectangle = rectangleQuantity.subscribe(value => {
 const unsubscribeTriangle = triangleQuantity.subscribe(value => {
  triangle_count = value;
 });
-
+//Handle button clicks, increase the respective product quantity value.
 function addQuantityCircle(){
         circleQuantity.update(n => n+1);
         navCartUpdateTxt();
@@ -66,7 +72,9 @@ img {
 
 <div class="flex-container">
   <ul>
+  <!-- We iterate over the products array and, -->
   {#each products.products as product}
+  <!-- We render the element based on the type of product -->
   {#if product.name === "Circle"}
     <li class="render-products"><img {src} alt={product.name} height="42" width="42"> {product.name} - {product.description} - {product.price}€ <button on:click={addQuantityCircle} class="button" id={product.name}> Add to cart </button></li>
     {:else if product.name === "Rectangle"}

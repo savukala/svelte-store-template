@@ -1,6 +1,9 @@
 <script>
+//import navCartUpdateTxt function to update the count of ordered procuts on nav
 import {navCartUpdateTxt} from './navcartupdatetxt.js';
+//import Rendershoppingcart component to render the shopping cart contents in the modal
 import Rendershoppingcart from './Rendershoppingcart.svelte';
+//import the true ordered quantities for each product
 import {circleQuantity, rectangleQuantity, triangleQuantity} from './productstore.js';
 
 function closeModal(){
@@ -8,11 +11,9 @@ function closeModal(){
   document.getElementsByClassName("shopping-cart-modal")[0].style.display = "none";
 }
 function clearModal(){
-  //sessionStorage.clear();
   //Hide the Shopping Cart Modal
   document.getElementsByClassName("shopping-cart-modal")[0].style.display = "none";
-
-  //Re-set the nav-shopping-cart-txt value
+  //Re-set the nav-shopping-cart-txt value on the Navbar
   circleQuantity.update(n => n-n);
   rectangleQuantity.update(n => n-n);
   triangleQuantity.update(n => n-n);
@@ -82,6 +83,7 @@ function clearModal(){
   <div class="modal-content"> <span class="modal-content-txt">Shopping Cart Contents</span>
     <button class="close" on:click={closeModal}> &times; </button>
     <div class="modal-data">
+    <!-- Rneder the Rendershoppingcart component inside of modal-data -->
       <Rendershoppingcart />
     </div>
     <button on:click={clearModal} class="remove-all-products">Remove all items</button>

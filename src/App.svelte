@@ -1,6 +1,5 @@
 <script>
-
-	import products from '../products.js'
+//import dependencies
 	import Renderheader from './components/Renderheader.svelte';
 	import Renderproducts from './components/Renderproducts.svelte';
 	import Rendershoppingcart from './components/Rendershoppingcart.svelte';
@@ -12,9 +11,9 @@
 <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
 </svelte:head>
 <main>
+<!-- Render all the necessary components in the main element -->
 <Renderheader />
 <Renderproducts />
-
 <Rendershoppingcartmodal />
 </main>
 

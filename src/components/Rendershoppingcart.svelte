@@ -1,10 +1,16 @@
 <script>
+//import navCartUpdateTxt function to update the count of ordered procuts on nav
 import {navCartUpdateTxt} from './navcartupdatetxt.js'
+//import all products
 import products from '../../products.js';
+//import the true ordered quantities for each product
  import {circleQuantity, rectangleQuantity, triangleQuantity} from './productstore.js';
+ //init local variables to hold the true ordered products count
  let circle_count;
  let rectangle_count;
  let triangle_count;
+ //subscribe to any changes on the ordered products quantity
+
 const unsubscribeCircle = circleQuantity.subscribe(value => {
 	circle_count = value;
 });
@@ -14,8 +20,7 @@ const unsubscribeRectangle = rectangleQuantity.subscribe(value => {
 const unsubscribeTriangle = triangleQuantity.subscribe(value => {
 	triangle_count = value;
 });
-// //let storage = JSON.parse(sessionStorage);
-// //console.log(storage);
+//Handle button clicks, decrease the respective product quantity value.
  function subQuantityCircle(){
         if (!circle_count <= 0) {
          circleQuantity.update(n => n-1);
@@ -34,14 +39,6 @@ function subQuantityTriangle(){
         navCartUpdateTxt();
       }
 }
-/*
-{#if product.name === "Circle"}
-{:else if product.name === "Rectangle"}
-<li>{product.name} - {product.description} - {product.price} - Quantity: {rectangle_value} <button on:click={subQuantity(product.name)} class="button" id={product.name}> Remove item </button></li>
-{:else if product.name === "Triangle"}
-<li>{product.name} - {product.description} - {product.price} - Quantity: {triangle_value} <button on:click={subQuantity(product.name)} class="button" id={product.name}> Remove item </button></li>
-{/if}
-*/
 </script>
 <style>
 .button {
@@ -80,7 +77,12 @@ img {
 
 <div class="flex-container">
   <ul>
+  <!-- We iterate over the products array and, -->
   {#each products.products as product}
+  <!--
+    We render the element based on the type of product
+    We also render the quantity of ordered items on the buttons.
+  -->
   {#if product.name === "Circle" && circle_count > 0}
     <li class="render-products"><img src="item1.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={subQuantityCircle} class="button" id={product.name}> Remove item ({circle_count})</button></li>
     {:else if product.name === "Rectangle" && rectangle_count > 0}
