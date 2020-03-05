@@ -17,7 +17,6 @@ const unsubscribeTriangle = triangleQuantity.subscribe(value => {
 });
 
 function addQuantityCircle(){
-  console.log("subqnt " + circle_count);
         circleQuantity.update(n => n+1);
         navCartUpdateTxt();
 }
