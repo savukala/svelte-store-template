@@ -27,6 +27,11 @@ import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from '.
    priceBTC = value/coinValue;
 
   });
+  /*
+    Advanced features:
+    - take user input into getPrice which should then filter the json to find coinValue for the respective selected coin
+
+  */
 //  export let totalPriceFormula = products.products[0].price * circle_count + products.products[1].price * rectangle_count + products.products[2].price * triangle_count;
 async function getPrice(){
   await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=1000&page=1&sparkline=false')

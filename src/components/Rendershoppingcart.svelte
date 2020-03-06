@@ -68,7 +68,7 @@ function subQuantityTriangle(){
 
 .flex-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
 }
 ul {
@@ -80,8 +80,8 @@ ul {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
+  margin-bottom: 1em;
   text-align: center;
-  font-family: arial;
 }
 
 .price {

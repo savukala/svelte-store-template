@@ -1,12 +1,13 @@
 <script>
+import { get } from 'svelte/store';
 import Rendercoinvalues from './Rendercoinvalues.svelte';
 //import navCartUpdateTxt function to update the count of ordered procuts on nav
 import {navCartUpdateTxt} from './navcartupdatetxt.js';
 //import Rendershoppingcart component to render the shopping cart contents in the modal
 import Rendershoppingcart from './Rendershoppingcart.svelte';
 //import the true ordered quantities for each product
-import {circleQuantity, rectangleQuantity, triangleQuantity} from './productstore.js';
-
+import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from './productstore.js';
+let total_price;
 function closeModal(){
   //Hide the Shopping Cart Modal
   document.getElementsByClassName("shopping-cart-modal")[0].style.display = "none";
@@ -20,6 +21,11 @@ function clearModal(){
   triangleQuantity.update(n => n-n);
   navCartUpdateTxt();
 }
+const unsubscribeTotalPrice = totalPrice.subscribe(value => {
+ total_price = value;
+});
+
+
 </script>
 
 <style>
@@ -86,7 +92,9 @@ function clearModal(){
     <div class="modal-data">
     <!-- Rneder the Rendershoppingcart component inside of modal-data -->
       <Rendershoppingcart />
+      {#if total_price > 0}
       <button on:click={clearModal} class="remove-all-products">Remove all items</button>
+      {/if}
       <Rendercoinvalues />
     </div>
     <p>Send your payment to:</p>
