@@ -15,7 +15,6 @@
 <Renderheader />
 <Renderproducts />
 <Rendershoppingcartmodal />
-<Rendercoinvalues />
 </main>
 
 <style>

@@ -81,13 +81,15 @@ function clearModal(){
 </style>
 
 <div id="shopping-cart-modal-id" class="shopping-cart-modal">
-  <div class="modal-content"> <span class="modal-content-txt">Shopping Cart Contents</span>
+  <div class="modal-content"> <span class="modal-content-txt"><h2>Shopping Cart Contents</h2></span>
     <button class="close" on:click={closeModal}> &times; </button>
     <div class="modal-data">
     <!-- Rneder the Rendershoppingcart component inside of modal-data -->
       <Rendershoppingcart />
+      <button on:click={clearModal} class="remove-all-products">Remove all items</button>
       <Rendercoinvalues />
     </div>
-    <button on:click={clearModal} class="remove-all-products">Remove all items</button>
+    <p>Send your payment to:</p>
+    <img src="bitcoin.PNG" alt="payment" style="width:50%">
   </div>
 </div>

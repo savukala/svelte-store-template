@@ -28,17 +28,20 @@ function renderShoppingCart(){
 .flex-container {
   display: flex;
   justify-content: space-evenly;
-  border: 1px solid;
+  border-bottom: 1px solid;
   margin-bottom: 2rem;
 }
 .nav-shopping-cart-txt {
-  background-color: green; /* Dark */
+  background-color: #000; /* Dark */
   border: none;
   color: white;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 1rem;
+  outline-style: solid;
+  outline-color: #000;
+  outline-width: 0.5rem;
 }
 
 </style>
