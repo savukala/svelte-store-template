@@ -114,7 +114,7 @@ img {
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
       <p  style="margin: 5px;">{product.description}</p>
-      <p><button on:click={addQuantityCircle} id={product.name}> Add to cart </button></p>
+      <!-- <p><button on:click={addQuantityCircle} id={product.name}> Add to cart </button></p> -->
     </div>
     <!-- <li class="render-products"><img {src} alt={product.name} height="200" width="auto"> {product.name} - {product.description} - {product.price}€ <button on:click={addQuantityCircle} class="button" id={product.name}> Add to cart </button></li> -->
     {:else if product.name === "Oiva Siideri"}
@@ -123,7 +123,7 @@ img {
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
       <p style="margin: 5px;">{product.description}</p>
-      <p><button on:click={addQuantityRectangle} id={product.name}> Add to cart </button></p>
+      <!-- <p><button on:click={addQuantityRectangle} id={product.name}> Add to cart </button></p> -->
     </div>
     <!-- <li class="render-products"><img src="item2.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityRectangle} class="button" id={product.name}> Add to cart</button></li> -->
     {:else if product.name === "Gin Long Drink"}
@@ -132,7 +132,7 @@ img {
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
       <p style="margin: 5px;">{product.description}</p>
-      <p><button on:click={addQuantityTriangle} id={product.name}> Add to cart </button></p>
+      <!-- <p><button on:click={addQuantityTriangle} id={product.name}> Add to cart </button></p> -->
     </div>
     <!-- <li class="render-products"><img src="item3.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityTriangle} class="button" id={product.name}>Add to cart </button></li> -->
     {/if}

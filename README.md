@@ -113,5 +113,5 @@ Rendershoppingcartmodal.svelte is responsible for rendering the container for Re
 
 More in depth explanation is to be found on the respective components files.
 
-## Crypto_bar?
-Crypto_bar branch aims at improving the project towards cryptocurrency enabled webshop concept. I selected a bar as an example business.
+## Product-list-only?
+This branch is for showcasing products without checkout optionality.

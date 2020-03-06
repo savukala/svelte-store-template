@@ -14,7 +14,7 @@
 <!-- Render all the necessary components in the main element -->
 <Renderheader />
 <Renderproducts />
-<Rendershoppingcartmodal />
+<!-- <Rendershoppingcartmodal /> -->
 </main>
 
 <style>

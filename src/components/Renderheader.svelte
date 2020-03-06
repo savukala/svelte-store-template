@@ -49,12 +49,12 @@ function renderShoppingCart(){
     <nav>
       <div class="flex-container">
         <div class="nav-logo">
-          <span class="nav-company-name">Savukala Solutions</span>
-          <span class="nav-company-slogan"> Cryptopayment-front </span>
+          <span class="nav-company-name">Best Bar</span>
+          <span class="nav-company-slogan"> Our products </span>
         </div>
         <div class="nav-shopping-cart">
-          <button on:click={renderShoppingCart} class="nav-shopping-cart-txt">Shopping Cart</button>
-          <span class="nav-shopping-cart-img"> </span>
+          <!-- <button on:click={renderShoppingCart} class="nav-shopping-cart-txt">Shopping Cart</button>
+          <span class="nav-shopping-cart-img"> </span> -->
         </div>
       </div>
     </nav>
