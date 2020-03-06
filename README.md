@@ -112,3 +112,6 @@ Rendershoppingcart.svelte is responsible for rendering the shopping cart content
 Rendershoppingcartmodal.svelte is responsible for rendering the container for Rendershoppingcart.
 
 More in depth explanation is to be found on the respective components files.
+
+## Crypto_bar?
+Crypto_bar branch aims at improving the project towards cryptocurrency enabled webshop concept. I selected a bar as an example business.
