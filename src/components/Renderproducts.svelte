@@ -47,7 +47,7 @@ function addQuantityTriangle(){
 
 .flex-container {
   display: flex;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
   margin-bottom: 3rem;
 }
 ul {
@@ -75,6 +75,7 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
   margin: auto;
+  margin-bottom: 1em; 
   text-align: center;
   font-family: arial;
 }
@@ -113,7 +114,7 @@ img {
       <img {src} alt={product.name} style="width:20%">
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
-      <p>{product.description}</p>
+      <p  style="margin: 5px;">{product.description}</p>
       <p><button on:click={addQuantityCircle} id={product.name}> Add to cart </button></p>
     </div>
     <!-- <li class="render-products"><img {src} alt={product.name} height="200" width="auto"> {product.name} - {product.description} - {product.price}€ <button on:click={addQuantityCircle} class="button" id={product.name}> Add to cart </button></li> -->
@@ -122,7 +123,7 @@ img {
       <img src="item2.PNG" alt={product.name} style="width:20%">
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
-      <p>{product.description}</p>
+      <p style="margin: 5px;">{product.description}</p>
       <p><button on:click={addQuantityRectangle} id={product.name}> Add to cart </button></p>
     </div>
     <!-- <li class="render-products"><img src="item2.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityRectangle} class="button" id={product.name}> Add to cart</button></li> -->
@@ -131,7 +132,7 @@ img {
       <img src="item3.PNG" alt={product.name} style="width:20%">
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
-      <p>{product.description}</p>
+      <p style="margin: 5px;">{product.description}</p>
       <p><button on:click={addQuantityTriangle} id={product.name}> Add to cart </button></p>
     </div>
     <!-- <li class="render-products"><img src="item3.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityTriangle} class="button" id={product.name}>Add to cart </button></li> -->
