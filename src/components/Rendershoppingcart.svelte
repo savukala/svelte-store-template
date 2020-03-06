@@ -83,11 +83,11 @@ img {
     We render the element based on the type of product
     We also render the quantity of ordered items on the buttons.
   -->
-  {#if product.name === "Circle" && circle_count > 0}
+  {#if product.name === "Kukko Lager" && circle_count > 0}
     <li class="render-products"><img src="item1.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={subQuantityCircle} class="button" id={product.name}> Remove item ({circle_count})</button></li>
-    {:else if product.name === "Rectangle" && rectangle_count > 0}
+    {:else if product.name === "Oiva Siideri" && rectangle_count > 0}
     <li class="render-products"><img src="item2.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={subQuantityRectangle} class="button" id={product.name}> Remove item ({rectangle_count})</button></li>
-    {:else if product.name === "Triangle" && triangle_count > 0}
+    {:else if product.name === "Gin Long Drink" && triangle_count > 0}
     <li class="render-products"><img src="item3.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={subQuantityTriangle} class="button" id={product.name}> Remove item ({triangle_count})</button></li>
     {/if}
   {/each}

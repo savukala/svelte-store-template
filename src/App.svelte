@@ -3,8 +3,8 @@
 	import Renderheader from './components/Renderheader.svelte';
 	import Renderproducts from './components/Renderproducts.svelte';
 	import Rendershoppingcart from './components/Rendershoppingcart.svelte';
-	import Rendershoppingcartmodal from './components/Rendershoppingcartmodal.svelte'
-
+	import Rendershoppingcartmodal from './components/Rendershoppingcartmodal.svelte';
+	import Rendercoinvalues from './components/Rendercoinvalues.svelte';
 </script>
 <svelte:head>
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
@@ -15,6 +15,7 @@
 <Renderheader />
 <Renderproducts />
 <Rendershoppingcartmodal />
+<Rendercoinvalues />
 </main>
 
 <style>

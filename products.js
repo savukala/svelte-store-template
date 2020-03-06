@@ -5,23 +5,23 @@ module.exports = {
   "products": [
     {
       "id": 1,
-      "name": "Circle",
-      "description": " Perfect choice when you don’t need any corners. ",
-      "price": 999,
+      "name": "Kukko Lager",
+      "description": " Hanasta. ",
+      "price": 5,
       "quantity": 0
     },
     {
       "id": 2,
-      "name": "Rectangle",
-      "description": " For once, it’s a great idea to think inside the box. ",
-      "price": 899,
+      "name": "Oiva Siideri",
+      "description": " Hanasta. ",
+      "price": 6,
       "quantity": 0
     },
     {
       "id": 3,
-      "name": "Triangle",
-      "description": " A true classic with three elegant corners. ",
-      "price": 1009,
+      "name": "Gin Long Drink",
+      "description": " Hanasta. ",
+      "price": 6.5,
       "quantity": 0
     }
   ]

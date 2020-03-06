@@ -40,13 +40,14 @@ function renderShoppingCart(){
   display: inline-block;
   font-size: 1rem;
 }
+
 </style>
   <header>
     <nav>
       <div class="flex-container">
         <div class="nav-logo">
-          <span class="nav-company-name">Whee</span>
-          <span class="nav-company-slogan"> - The most definitive shape store in the world</span>
+          <span class="nav-company-name">Savukala Solutions</span>
+          <span class="nav-company-slogan"> Cryptopayment-front </span>
         </div>
         <div class="nav-shopping-cart">
           <button on:click={renderShoppingCart} class="nav-shopping-cart-txt">Shopping Cart</button>

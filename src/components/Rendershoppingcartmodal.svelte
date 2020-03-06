@@ -1,4 +1,5 @@
 <script>
+import Rendercoinvalues from './Rendercoinvalues.svelte';
 //import navCartUpdateTxt function to update the count of ordered procuts on nav
 import {navCartUpdateTxt} from './navcartupdatetxt.js';
 //import Rendershoppingcart component to render the shopping cart contents in the modal
@@ -85,6 +86,7 @@ function clearModal(){
     <div class="modal-data">
     <!-- Rneder the Rendershoppingcart component inside of modal-data -->
       <Rendershoppingcart />
+      <Rendercoinvalues />
     </div>
     <button on:click={clearModal} class="remove-all-products">Remove all items</button>
   </div>
