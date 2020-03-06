@@ -30,7 +30,8 @@ import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from '.
   /*
     Advanced features:
     - take user input into getPrice which should then filter the json to find coinValue for the respective selected coin
-
+    -> Where do we get the input from?
+    -> What do we need to bind on other elements to update the currency and value?
   */
 //  export let totalPriceFormula = products.products[0].price * circle_count + products.products[1].price * rectangle_count + products.products[2].price * triangle_count;
 async function getPrice(){
