@@ -25,8 +25,8 @@ function clearModal(){
 //Subscribe to any changes on the total_price.
 const unsubscribeTotalPrice = totalPrice.subscribe(value => {
  total_price = value;
-});
 
+});
 
 </script>
 
@@ -61,7 +61,7 @@ const unsubscribeTotalPrice = totalPrice.subscribe(value => {
   font-size: 2rem;
   font-weight: bold;
   background-color: none;
-  margin-left: 1rem;
+
 }
 
 .close:hover,
@@ -82,6 +82,7 @@ const unsubscribeTotalPrice = totalPrice.subscribe(value => {
   text-decoration: none;
   display: inline-block;
   font-size: 1rem;
+  margin-bottom: 1em;
 }
 .remove-all-products:hover, .remove-all-products:focus {
   cursor: pointer;
@@ -101,8 +102,5 @@ const unsubscribeTotalPrice = totalPrice.subscribe(value => {
       <!-- Render the coin value -->
       <Rendercoinvalues />
     </div>
-    <!-- Show the payment QR -->
-    <p>Send your payment to:</p>
-    <img src="bitcoin.PNG" alt="payment" style="width:50%">
   </div>
 </div>

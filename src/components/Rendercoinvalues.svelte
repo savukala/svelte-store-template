@@ -64,11 +64,16 @@ async function getPrice(){
 
 <style>
 .coin-value-wrapper {
-  border-bottom: solid 1px;
+  margin-top: 1em;
   margin-bottom: 1em;
+  border: 1px solid black;
+  
 }
 </style>
 
 <div class="coin-value-wrapper">
   <p>Total for checkout in bitcoins: {priceBTC || 0}</p>
+  <!-- Show the payment QR -->
+  <p>Send your payment to:</p>
+  <img src="bitcoin.PNG" alt="payment" style="width:50%">
 </div>
