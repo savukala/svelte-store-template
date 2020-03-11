@@ -110,7 +110,7 @@ img {
   <!-- We render the element based on the type of product -->
   {#if product.name === "Kukko Lager"}
     <div class="card">
-      <img {src} alt={product.name} style="width:20%">
+      <img src={product.image} alt={product.name} style="width:20%">
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
       <p  style="margin: 5px;">{product.description}</p>
@@ -119,7 +119,7 @@ img {
     <!-- <li class="render-products"><img {src} alt={product.name} height="200" width="auto"> {product.name} - {product.description} - {product.price}€ <button on:click={addQuantityCircle} class="button" id={product.name}> Add to cart </button></li> -->
     {:else if product.name === "Oiva Siideri"}
     <div class="card">
-      <img src="item2.PNG" alt={product.name} style="width:20%">
+      <img src={product.image} alt={product.name} style="width:20%">
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
       <p style="margin: 5px;">{product.description}</p>
@@ -128,7 +128,7 @@ img {
     <!-- <li class="render-products"><img src="item2.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityRectangle} class="button" id={product.name}> Add to cart</button></li> -->
     {:else if product.name === "Gin Long Drink"}
     <div class="card">
-      <img src="item3.PNG" alt={product.name} style="width:20%">
+      <img src={product.image} alt={product.name} style="width:20%">
       <h1>{product.name}</h1>
       <p class="price">{product.price} €</p>
       <p style="margin: 5px;">{product.description}</p>
