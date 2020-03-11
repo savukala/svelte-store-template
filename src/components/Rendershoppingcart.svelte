@@ -4,11 +4,12 @@ import {navCartUpdateTxt} from './navcartupdatetxt.js'
 //import all products
 import products from '../../products.js';
 //import the true ordered quantities for each product
- import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from './productstore.js';
+ import {circleQuantity, rectangleQuantity, triangleQuantity, item4Quantity, totalPrice} from './productstore.js';
  //init local variables to hold the true ordered products count
  let circle_count;
  let rectangle_count;
  let triangle_count;
+ let item4_count;
  let total_price;
 
  //subscribe to any changes on the ordered products quantity
@@ -23,6 +24,9 @@ const unsubscribeTriangle = triangleQuantity.subscribe(value => {
 });
 const unsubscribeTotalPrice = totalPrice.subscribe(value => {
  total_price = value;
+});
+const unsubscribeItem = item4Quantity.subscribe(value => {
+ item4_count = value;
 });
 //Handle button clicks, decrease the respective product quantity value.
  function subQuantityCircle(){
@@ -46,6 +50,26 @@ function subQuantityTriangle(){
         navCartUpdateTxt();
       }
 }
+function subItem4(){
+  if (!item4_count <= 0) {
+    item4Quantity.update(n => n-1);
+    totalPrice.update(n => n-products.products[3].price);
+    navCartUpdateTxt();
+  }
+}
+
+/*
+Rewrite:
+function subItem(id){
+  if (id === 0) {
+  if (!circle_count <= 0) {
+   circleQuantity.update(n => n-1);
+   totalPrice.update(n => n-products.products[0].price);
+   navCartUpdateTxt();
+ }
+}..and so on
+}
+*/
 </script>
 <style>
 .button {
@@ -139,6 +163,14 @@ ul {
       <p class="price">{product.price} €</p>
       <p>{product.description}</p>
       <p><button on:click={subQuantityTriangle} id={product.name}> Remove product ({triangle_count}) </button></p>
+    </div>
+    {:else if product.name === "Brändy Long Drink"}
+    <div class="card">
+      <img src={product.image} alt={product.name} style="width:20%">
+      <h1>{product.name}</h1>
+      <p class="price">{product.price} €</p>
+      <p style="margin: 5px;">{product.description}</p>
+      <p><button on:click={subItem4} id={product.name}> Remove product </button></p>
     </div>
     <!-- <li class="render-products"><img src="item3.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityTriangle} class="button" id={product.name}>Add to cart </button></li> -->
     {/if}

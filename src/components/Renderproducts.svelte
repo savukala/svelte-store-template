@@ -3,25 +3,11 @@ import Rendercoinvalues from './Rendercoinvalues.svelte';
 //import the set of products to be displayed on the frontpage.
 import products from '../../products.js';
 //import the true ordered quantities for each product
-import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from './productstore.js';
+import {circleQuantity, rectangleQuantity, triangleQuantity, item4Quantity, totalPrice} from './productstore.js';
 //import function navCartUpdateTxt to update the changes
 import {navCartUpdateTxt} from './navcartupdatetxt.js';
-//throw img into a local variable
-let src =  'item1.PNG'
-//init local variables to hold the true ordered products count
-let circle_count;
-let rectangle_count;
-let triangle_count;
-//subscribe to any changes on the ordered products quantity
-const unsubscribeCircle = circleQuantity.subscribe(value => {
- circle_count = value;
-});
-const unsubscribeRectangle = rectangleQuantity.subscribe(value => {
- rectangle_count = value;
-});
-const unsubscribeTriangle = triangleQuantity.subscribe(value => {
- triangle_count = value;
-});
+
+
 //Handle button clicks, increase the respective product quantity value.
 function addQuantityCircle(){
         circleQuantity.update(n => n+1);
@@ -36,6 +22,30 @@ function addQuantityRectangle(){
 function addQuantityTriangle(){
        triangleQuantity.update(n => n+1);
        totalPrice.update(n => n+products.products[2].price);
+       navCartUpdateTxt();
+}
+//Expand this function to compass all possible input buttons.
+/*
+function addQuantity(id){
+  if (id === 0){
+    circleQuantity.update(n => n+1);
+    totalPrice.update(n => n+products.products[id].price);
+    navCartUpdateTxt();
+  }else if (id === 1){
+    rectangleQuantity.update(n => n+1);
+    totalPrice.update(n => n+products.products[id].price);
+    navCartUpdateTxt();
+  }else if (id === 2) {
+    triangleQuantity.update(n => n+1);
+    totalPrice.update(n => n+products.products[id].price);
+    navCartUpdateTxt();
+  }  ...and so on
+}
+
+*/
+function addQuantity4(){
+       item4Quantity.update(n => n+1);
+       totalPrice.update(n => n+products.products[3].price);
        navCartUpdateTxt();
 }
 
@@ -104,6 +114,14 @@ img {
 <div class="flex-container">
 
 
+  <!-- REMOVE THE IF CLAUSES AND RUN AN ELSE ONLY
+  <div class="card">
+    <img src={product.image} alt={product.name} style="width:20%">
+    <h1>{product.name}</h1>
+    <p class="price">{product.price} €</p>
+    <p  style="margin: 5px;">{product.description}</p>
+    <p><button on:click={addQuantityCircle} id={product.name}> Add to cart </button></p>
+  -->
 
   <!-- We iterate over the products array and, -->
   {#each products.products as product}
@@ -133,6 +151,14 @@ img {
       <p class="price">{product.price} €</p>
       <p style="margin: 5px;">{product.description}</p>
       <p><button on:click={addQuantityTriangle} id={product.name}> Add to cart </button></p>
+    </div>
+    {:else if product.name === "Brändy Long Drink"}
+    <div class="card">
+      <img src={product.image} alt={product.name} style="width:20%">
+      <h1>{product.name}</h1>
+      <p class="price">{product.price} €</p>
+      <p style="margin: 5px;">{product.description}</p>
+      <p><button on:click={addQuantity4} id={product.name}> Add to cart </button></p>
     </div>
     <!-- <li class="render-products"><img src="item3.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityTriangle} class="button" id={product.name}>Add to cart </button></li> -->
     {/if}

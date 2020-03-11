@@ -6,7 +6,7 @@ import {navCartUpdateTxt} from './navcartupdatetxt.js';
 //import Rendershoppingcart component to render the shopping cart contents in the modal
 import Rendershoppingcart from './Rendershoppingcart.svelte';
 //import the true ordered quantities for each product
-import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from './productstore.js';
+import {circleQuantity, rectangleQuantity, triangleQuantity, item4Quantity, totalPrice} from './productstore.js';
 //init local variable to hold total price of purchase.
 let total_price;
 function closeModal(){
@@ -20,6 +20,7 @@ function clearModal(){
   circleQuantity.update(n => n-n);
   rectangleQuantity.update(n => n-n);
   triangleQuantity.update(n => n-n);
+  item4Quantity.update(n => n-n);
   navCartUpdateTxt();
 }
 //Subscribe to any changes on the total_price.
