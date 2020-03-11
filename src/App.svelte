@@ -5,6 +5,8 @@
 	import Rendershoppingcart from './components/Rendershoppingcart.svelte';
 	import Rendershoppingcartmodal from './components/Rendershoppingcartmodal.svelte';
 	import Rendercoinvalues from './components/Rendercoinvalues.svelte';
+	import Footer from './components/Footer.svelte';
+
 </script>
 <svelte:head>
 <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
@@ -15,6 +17,7 @@
 <Renderheader />
 <Renderproducts />
 <Rendershoppingcartmodal />
+<Footer />
 </main>
 
 <style>
