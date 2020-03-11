@@ -10,8 +10,8 @@ import products from '../../products.js';
  let rectangle_count;
  let triangle_count;
  let total_price;
- //subscribe to any changes on the ordered products quantity
 
+ //subscribe to any changes on the ordered products quantity
 const unsubscribeCircle = circleQuantity.subscribe(value => {
 	circle_count = value;
 });

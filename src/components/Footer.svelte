@@ -1,4 +1,6 @@
-
+<script>
+//The Footer element, no js-logic needed as of now.
+</script>
 <style>
 footer {
   border-top: 1px solid black;

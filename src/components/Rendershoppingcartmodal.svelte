@@ -7,6 +7,7 @@ import {navCartUpdateTxt} from './navcartupdatetxt.js';
 import Rendershoppingcart from './Rendershoppingcart.svelte';
 //import the true ordered quantities for each product
 import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from './productstore.js';
+//init local variable to hold total price of purchase.
 let total_price;
 function closeModal(){
   //Hide the Shopping Cart Modal
@@ -21,6 +22,7 @@ function clearModal(){
   triangleQuantity.update(n => n-n);
   navCartUpdateTxt();
 }
+//Subscribe to any changes on the total_price.
 const unsubscribeTotalPrice = totalPrice.subscribe(value => {
  total_price = value;
 });
@@ -92,11 +94,14 @@ const unsubscribeTotalPrice = totalPrice.subscribe(value => {
     <div class="modal-data">
     <!-- Rneder the Rendershoppingcart component inside of modal-data -->
       <Rendershoppingcart />
+      <!-- Show the remove all button if there are any ordered items -->
       {#if total_price > 0}
       <button on:click={clearModal} class="remove-all-products">Remove all items</button>
       {/if}
+      <!-- Render the coin value -->
       <Rendercoinvalues />
     </div>
+    <!-- Show the payment QR -->
     <p>Send your payment to:</p>
     <img src="bitcoin.PNG" alt="payment" style="width:50%">
   </div>
