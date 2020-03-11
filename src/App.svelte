@@ -16,12 +16,8 @@
 <!-- Render all the necessary components in the main element -->
 <Renderheader />
 <Renderproducts />
-<<<<<<< HEAD
-<!-- <Rendershoppingcartmodal /> -->
-=======
 <Rendershoppingcartmodal />
 <Footer />
->>>>>>> b4ed28cdca0fd8a5c3f8b228724dd808a30c2f0c
 </main>
 
 <style>
