@@ -1,27 +1,4 @@
 <script>
-  //import shoppingCartImage from '../assets/shopping-cart.svg';
-  //import the item ordered values from productstore
-  import {circleQuantity, rectangleQuantity, triangleQuantity} from './productstore.js';
-  //init local variables to hold the true ordered quantity of items.
-  let circle_count;
-  let rectangle_count;
-  let triangle_count;
-  //subscribe to any changes on the ordered items values
- const unsubscribeCircle = circleQuantity.subscribe(value => {
- 	circle_count = value;
- });
- const unsubscribeRectangle = rectangleQuantity.subscribe(value => {
- 	rectangle_count = value;
- });
- const unsubscribeTriangle = triangleQuantity.subscribe(value => {
- 	triangle_count = value;
- });
- //Render the shopping cart if and only if anything has been ordered
-function renderShoppingCart(){
-  if (circle_count > 0 || rectangle_count > 0 || triangle_count >0 ) {
-  document.getElementsByClassName("shopping-cart-modal")[0].style.display = "block";
-  }
-}
 
 </script>
 <style>

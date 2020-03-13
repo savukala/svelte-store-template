@@ -2,9 +2,7 @@
 //import dependencies
 	import Renderheader from './components/Renderheader.svelte';
 	import Renderproducts from './components/Renderproducts.svelte';
-	import Rendershoppingcart from './components/Rendershoppingcart.svelte';
-	import Rendershoppingcartmodal from './components/Rendershoppingcartmodal.svelte';
-	import Rendercoinvalues from './components/Rendercoinvalues.svelte';
+	// import Rendercoinvalues from './components/Rendercoinvalues.svelte';
 	import Footer from './components/Footer.svelte';
 
 </script>
@@ -16,7 +14,6 @@
 <!-- Render all the necessary components in the main element -->
 <Renderheader />
 <Renderproducts />
-<Rendershoppingcartmodal />
 <Footer />
 </main>
 
@@ -58,19 +55,5 @@
 	.nav-company-slogan {
 	  font-family: 'Playfair Display';
 	}
-	.nav-shopping-cart {
-	  font-family: 'Playfair Display';
-	  padding: 10px;
-	}
-	.nav-shopping-cart-txt:hover,
-	.nav-shopping-cart-txt:focus {
-	    cursor: pointer;
-	}
-	.nav-shopping-cart-text {
-	  font-family: 'Playfair Display';
-	}
-	.nav-shopping-cart-img {
-
-	}
-
+	
 </style>

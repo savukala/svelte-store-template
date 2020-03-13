@@ -1,3 +1,6 @@
+<!--
+If we need values in cryptoes, here is where we will fetch the values.
+
 <script>
 import products from '../../products.js';
 import {circleQuantity, rectangleQuantity, triangleQuantity, totalPrice} from './productstore.js';
@@ -66,4 +69,4 @@ async function getPrice(){
 
 <div class="coin-value-wrapper">
   <p>Total for checkout in bitcoins: {priceBTC || 0}</p>
-</div>
+</div> -->

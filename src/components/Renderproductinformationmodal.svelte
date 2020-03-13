@@ -1,4 +1,8 @@
-<script>
+<!--
+This is where we will render the product card modal.
+To be programmed.
+
+ <script>
 import { get } from 'svelte/store';
 import Rendercoinvalues from './Rendercoinvalues.svelte';
 //import navCartUpdateTxt function to update the count of ordered procuts on nav
@@ -100,4 +104,4 @@ const unsubscribeTotalPrice = totalPrice.subscribe(value => {
     <p>Send your payment to:</p>
     <img src="bitcoin.PNG" alt="payment" style="width:50%">
   </div>
-</div>
+</div> -->

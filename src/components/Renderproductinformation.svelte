@@ -1,3 +1,7 @@
+<!--
+If we want to serve modals, here is where we will create the product cards.
+To be programmed.
+
 <script>
 //import navCartUpdateTxt function to update the count of ordered procuts on nav
 import {navCartUpdateTxt} from './navcartupdatetxt.js'
@@ -143,4 +147,4 @@ ul {
     <!-- <li class="render-products"><img src="item3.JPG" alt={product.name} height="42" width="42">{product.name} - {product.description} - {product.price}€ <button on:click={addQuantityTriangle} class="button" id={product.name}>Add to cart </button></li> -->
     {/if}
   {/each}
-</div>
+</div> -->
