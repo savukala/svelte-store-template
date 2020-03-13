@@ -164,7 +164,7 @@ ul {
       <p>{product.description}</p>
       <p><button on:click={subQuantityTriangle} id={product.name}> Remove product ({triangle_count}) </button></p>
     </div>
-    {:else if product.name === "Brändy Long Drink"}
+    {:else if product.name === "Brändy Long Drink" && item4_count > 0}
     <div class="card">
       <img src={product.image} alt={product.name} style="width:20%">
       <h1>{product.name}</h1>
