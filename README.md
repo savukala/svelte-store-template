@@ -99,19 +99,14 @@ In the root of src we have main.js which calls upon App.svelte and renders it in
 App.svelte imports all the components and renders them on the application pages.
 
 ## Components
-navcartupdatetxt.js is responsible for updating the textContent of the Shopping Cart button in header/navigation.
-
-productstore.js is responsible for storing the quantity of orders for each respective product.
 
 Renderheader.svelte is responsible for rendering the Header element.
 
 Renderproducts.svelte is responsible for rendering the products list on the front page.
 
-Rendershoppingcart.svelte is responsible for rendering the shopping cart contents on the shopping cart modal.
-
-Rendershoppingcartmodal.svelte is responsible for rendering the container for Rendershoppingcart.
-
 More in depth explanation is to be found on the respective components files.
 
 ## Product-list-only?
 This branch is for showcasing products without checkout optionality.
+
+Products are currently listed at ./products.js
