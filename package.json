@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@material/card": "^5.1.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "rollup-plugin-postcss": "^2.2.0",
     "sass": "^1.26.2",
     "sirv-cli": "^0.4.4",
