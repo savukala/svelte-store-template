@@ -19,7 +19,7 @@
   "dependencies": {
     "@material/card": "^5.1.0",
     "node-sass": "^4.13.1",
-    "rollup-plugin-postcss": "^2.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "sass": "^1.26.2",
     "sirv-cli": "^0.4.4",
     "svelte-preprocess": "^3.4.0"
